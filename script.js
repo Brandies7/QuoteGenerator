@@ -23,7 +23,7 @@ function newQuote() {
     setTimeout(() => {
         const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
-    if(quote.author === null) {
+    if(!quote.author) {
         authorText.textContent = 'Unknown'
     }
     else {
